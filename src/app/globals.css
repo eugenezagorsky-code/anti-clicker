@@ -1,0 +1,66 @@
+@import "../lib/motion/keyframes.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-surface: #000b1e;
+  --color-surface-raised: #0a1628;
+  --color-accent: #00d4e8;
+  --color-accent-dim: #5a8a9a;
+  --color-accent-light: #7ec8e3;
+  --color-border: rgba(0, 212, 232, 0.35);
+  --color-danger: #e8a838;
+  --color-danger-bright: #ff4444;
+  --color-success: #22c55e;
+  --color-success-bright: #4ade80;
+  --color-success-dim: #86efac;
+  --color-success-border: rgba(34, 197, 94, 0.4);
+  --color-warning: #ca8a04;
+  --color-warning-bright: #facc15;
+  --color-warning-dim: #fde047;
+  --color-warning-border: rgba(250, 204, 21, 0.4);
+  --color-muted: #6a8fa3;
+  --color-text: #d4e8f0;
+  --color-text-muted: #6a8fa3;
+  --crt-scanline-opacity: 0.06;
+  --crt-glow: 0 0 8px rgba(0, 212, 232, 0.35);
+  --decay-blur: 0px;
+  --decay-grayscale: 0;
+  --decay-opacity: 1;
+}
+
+html {
+  color-scheme: dark;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-ibm-plex-mono), ui-monospace, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .crt-panel {
+    border: 1px solid var(--color-border);
+    background-color: var(--color-surface-raised);
+    border-radius: 0;
+  }
+
+  .crt-glow-text {
+    text-shadow: var(--crt-glow);
+  }
+
+  .crt-glow-text-success {
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.45);
+  }
+
+  .crt-glow-text-warning {
+    text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+  }
+}

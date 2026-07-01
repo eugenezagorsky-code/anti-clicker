@@ -1,0 +1,119 @@
+@keyframes kill-switch-glitch {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    text-shadow:
+      2px 0 #ff4444,
+      -2px 0 #00d4e8;
+  }
+  20% {
+    transform: translate(-2px, 1px);
+    text-shadow:
+      3px 0 #ff4444,
+      -3px 0 #00d4e8;
+  }
+  40% {
+    transform: translate(2px, -1px);
+    text-shadow:
+      -2px 0 #ff4444,
+      2px 0 #00d4e8;
+  }
+  60% {
+    transform: translate(1px, 2px);
+    text-shadow:
+      1px 0 #ff4444,
+      -1px 0 #00d4e8;
+  }
+  80% {
+    transform: translate(-1px, -2px);
+    text-shadow:
+      -3px 0 #ff4444,
+      3px 0 #00d4e8;
+  }
+}
+
+.kill-switch {
+  animation: kill-switch-glitch 0.35s steps(2, end) infinite;
+}
+
+.kill-switch:hover {
+  animation-duration: 0.15s;
+}
+
+@keyframes meltdown-shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-8px, 4px);
+  }
+  20% {
+    transform: translate(8px, -6px);
+  }
+  30% {
+    transform: translate(-6px, -8px);
+  }
+  40% {
+    transform: translate(6px, 8px);
+  }
+  50% {
+    transform: translate(-8px, 6px);
+  }
+  60% {
+    transform: translate(8px, -4px);
+  }
+  70% {
+    transform: translate(-4px, 8px);
+  }
+  80% {
+    transform: translate(4px, -8px);
+  }
+  90% {
+    transform: translate(-6px, 4px);
+  }
+}
+
+.meltdown-shake {
+  animation: meltdown-shake 0.12s steps(2, end) infinite;
+}
+
+@keyframes disconnect-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.92;
+  }
+  52% {
+    opacity: 0.75;
+  }
+  54% {
+    opacity: 1;
+  }
+}
+
+.disconnect-flicker {
+  animation: disconnect-flicker 0.25s steps(2, end) infinite;
+}
+
+@keyframes decay-shake {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, 0.5px);
+  }
+  50% {
+    transform: translate(1px, -0.5px);
+  }
+  75% {
+    transform: translate(-0.5px, -0.5px);
+  }
+}
+
+.decay-shake {
+  animation: decay-shake 0.15s steps(2, end) infinite;
+}
